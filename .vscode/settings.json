@@ -16,5 +16,6 @@
     },
     "markdownlint.customRules": [
         "MD013: false "
-    ]
+    ],
+    "cmake.sourceDirectory": "C:/Users/obsfe/.dotnet/sdk-advertising/8.0.200/microsoft.net.workload.emscripten.current"
 }
