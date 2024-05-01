@@ -4,5 +4,17 @@
             "file:///home/obsfeil/dotnet/dotnet-dotnet/.markdownlint.yml"
         ],
         "https://json.schemastore.org/yamllint.json": "file:///home/obsfeil/dotnet/dotnet-dotnet/.markdownlint.yaml"
-    }
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+        "editor.formatOnPaste": true,
+        "editor.tabSize": 2,
+        "editor.insertSpaces": false,
+        "editor.detectIndentation": false,
+        "editor.detectIndentationInPaste": false,
+        "editor.formatOnSave": true
+    },
+    "markdownlint.customRules": [
+        "MD013: false "
+    ]
 }
