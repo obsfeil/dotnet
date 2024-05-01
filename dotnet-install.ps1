@@ -243,7 +243,7 @@ function Get-Machine-Architecture() {
     # To get the correct architecture, we need to use PROCESSOR_ARCHITEW6432.
     # PS x64 doesn't define this, so we fall back to PROCESSOR_ARCHITECTURE.
     # Possible values: amd64, x64, x86, arm64, arm
-    if( $ENV:PROCESSOR_ARCHITEW6432 -ne $null ) {
+    if( $null -ne $ENV:PROCESSOR_ARCHITEW6432 ) {
         return $ENV:PROCESSOR_ARCHITEW6432
     }
 
@@ -279,7 +279,7 @@ function Get-CLIArchitecture-From-Architecture([string]$Architecture) {
     }
 }
 
-function ValidateFeedCredential([string] $FeedCredential)
+function ValidateFeedCredential([SecureString] $FeedCredential)
 {
     if ($Internal -and [string]::IsNullOrWhitespace($FeedCredential)) {
         $message = "Provide credentials via -FeedCredential parameter."
@@ -724,7 +724,7 @@ function Get-Product-Version-Url([string]$AzureFeed, [string]$SpecificVersion, [
         elseif ($Runtime -eq "windowsdesktop") {
             # The windows desktop runtime is part of the core runtime layout prior to 5.0
             $ProductVersionTxtURL = "$AzureFeed/Runtime/$SpecificVersion/$pvFileName"
-            if ($majorVersion -ne $null -and $majorVersion -ge 5) {
+            if ($null -ne $majorVersion -and $majorVersion -ge 5) {
                 $ProductVersionTxtURL = "$AzureFeed/WindowsDesktop/$SpecificVersion/$pvFileName"
             }
         }
@@ -824,7 +824,7 @@ function Get-List-Of-Directories-And-Versions-To-Unpack-From-Dotnet-Package([Sys
 
     $ret = $ret | Sort-Object | Get-Unique
 
-    $values = ($ret | foreach { "$_" }) -join ";"
+    $values = ($ret | ForEach-Object-Object { "$_" }) -join ";"
     Say-Verbose "Directories to unpack: $values"
 
     return $ret
