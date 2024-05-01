@@ -234,7 +234,7 @@ Trace-Log "Time elapsed $(Format-ElapsedTime ($endTime - $startTime))"
 Trace-Log ('=' * 60)
 
 if ($BuildErrors) {
-    $ErrorLines = $BuildErrors | ForEach-Object{ ">>> $($_.Exception.Message)" }
+    $ErrorLines = $BuildErrors | %{ ">>> $($_.Exception.Message)" }
     Write-Error "Build's completed with $($BuildErrors.Count) error(s):`r`n$($ErrorLines -join "`r`n")" -ErrorAction Stop
 }
 
