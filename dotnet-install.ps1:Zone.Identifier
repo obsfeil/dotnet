@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://github.com/dotnet/install-scripts?tab=readme-ov-file
+HostUrl=https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.ps1
