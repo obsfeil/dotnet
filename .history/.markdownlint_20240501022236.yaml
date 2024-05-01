@@ -1,0 +1,13 @@
+   {
+    "editor.someSetting": true,
+    "markdownlint.config": {
+        default: "true",
+        MD003: { "style": "atx_closed" },
+        MD007: { "indent": 4 },
+        MD013: { "style": "asterisk" },
+        MD024: { "style": "asterisk" },
+        no-hard-tabs: "false",
+        image: "example.jpg"
+
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "yaml.schemas": {
+        "https://json.schemastore.org/sourcehut-build-0.65.0.json": [
+            "file:///home/obsfeil/dotnet/dotnet-dotnet/.markdownlint.yml"
+        ],
+        "https://json.schemastore.org/yamllint.json": "file:///home/obsfeil/dotnet/dotnet-dotnet/.markdownlint.yaml"
+    }
+}
