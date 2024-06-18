@@ -39,7 +39,7 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.0.2",
     "webpack": "^5.76.3",
-    "ws": " ^6.0.0"
+    "ws": "^6.2.3"
   },
   "scripts": {
     "preclean": "cd .. && npm run build",
